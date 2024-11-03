@@ -26,6 +26,7 @@ import {MatSortModule} from "@angular/material/sort";
 import {MatInputModule} from "@angular/material/input";
 import {ReactiveFormsModule} from "@angular/forms";
 import {AuthGuard} from "./guards/auth.guard";
+import {AuthorizationGuardGuard} from "./guards/authorization.guard";
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import {AuthGuard} from "./guards/auth.guard";
     ReactiveFormsModule
   ],
   providers: [
-    AuthGuard
+    AuthGuard,
+    AuthorizationGuardGuard
   ],
   bootstrap: [AppComponent]
 })
